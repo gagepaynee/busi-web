@@ -1,0 +1,105 @@
+body {
+    height: 100%;
+}
+
+/*Navbar*/
+.navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+
+.list-group-item {
+    border: none;
+}
+/*Side navbar*/
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.affix {
+    position: absolute;
+    top: 56px;
+    z-index: 1;
+}
+/*Rankings Box*/
+.myContainer {
+    background-color: rgba(216, 216, 216, 0.125);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+html body div.container-fluid div.row div.col-lg-9.mb-2 div.myContainer div.row div.col-lg-6.mb-2 div.card.cd div.card-body ol center li {
+    padding: 10px;
+}
+
+.card {
+    margin-bottom: 30px;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+}
+
+.card:focus {
+    margin-bottom: 30px;
+    zoom: 1.05;
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+}
+div.dropdown li a{
+    text-decoration: none;
+    color: black;
+}
+div.dropdown li:hover {
+    zoom: 1.02;
+    -moz-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-filter: grayscale(30%);
+	filter: grayscale(30%);
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+}
+
+.text {
+    float: left;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    cursor: pointer;
+    color: gray;
+    text-decoration: none;
+}
+
+a.text.card-body {
+    padding-top: 0;
+    padding-bottom: 0;
+    float: left;
+}
+.btn {
+    padding: .2rem;
+}
+
+.btn-success {
+    background-color: rgb(117, 218, 117);
+    border: 0px;
+}
+.btn-danger {
+    background-color: rgb(252, 56, 56);
+    border: 0px;
+}

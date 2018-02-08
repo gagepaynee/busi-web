@@ -1,0 +1,485 @@
+{% extends 'feed/base.html' %}
+{% load feed_extras %}
+{% block content %}
+        <!--Side Navbar-->
+        <div class="sidebar-nav affix list-group" id="affix-this">
+            <a href="#" class="list-group-item list-group-item-action">Quick Link</a>
+            <a href="#topStoriesCard" id="topStories_Quick" class="list-group-item list-group-item-action scrollTo">Top Stories</a>
+            <a href="#usCard" id="us_Quick" class="list-group-item list-group-item-action scrollTo">U.S.</a>
+            <a href="#worldCard" id="world_Quick" class="list-group-item list-group-item-action scrollTo">World</a>
+            <a href="#politicsCard" id="politics_Quick" class="list-group-item list-group-item-action scrollTo">Politics</a>
+            <a href="#moneyCard" id="money_Quick" class="list-group-item list-group-item-action scrollTo">Money</a>
+            <a href="#healthCard" id="health_Quick" class="list-group-item list-group-item-action scrollTo">Health</a>
+            <a href="#sportsCard" id="sports_Quick" class="list-group-item list-group-item-action scrollTo">Sports</a>
+            <a href="#techCard" id="tech_Quick" class="list-group-item list-group-item-action scrollTo">Tech</a>
+            <a href="#travelCard" id="travel_Quick" class="list-group-item list-group-item-action scrollTo">Travel</a>
+        </div>
+
+        <!--Rankings Box with 8 boxes-->
+        <!--<div class="container-fluid">
+            <div class="row">
+                <!--Space for sidebarXX>
+                <div class="col-lg-2 mb-2"></div>
+                <!--Main Ranking BoxXX>
+                <div class="col-lg-9 mb-2">
+                    <div style="height: 30px;"></div>
+                    <div class="myContainer">
+                        <!--TitleXX>
+                        <h1><center>Rankings</center></h1>
+                        <!--First Row of RankingsXX>
+                        <div class="row">
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Second Row of RankingsXX>
+                        <div class="row">
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                        <div class="card-body">
+                                            <ol>
+                                                <li>Organization 1</li>
+                                                <li>Organization 2</li>
+                                                <li>Organization 3</li>
+                                                <li>Organization 4</li>
+                                                <li>Organization 5</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="col-lg-3 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header">Oranizations</h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!--Rankings Box with 2 boxes-->
+        <div class="container-fluid">
+            <div class="row">
+                <!--Space for sidebar-->
+                <div class="col-lg-2 mb-2"></div>
+                <!--Main Ranking Box-->
+                <div class="col-lg-9 mb-2">
+                    <div style="height: 30px;"></div>
+                    <div class="myContainer">
+                        <!--Title-->
+                        <h1><center>Rankings</center></h1>
+                        <!--First Row of Rankings-->
+                        <div class="row">
+                            <div class="col-lg-6 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header"><center>Top Stories</center></h4>
+                                    <div class="card-body">
+                                        <ol>
+                                            <div id="accordion">
+                                                {% for article in articles %}
+                                                    {{article.rank}} : {{article.networks.all}}
+                                                {% endfor %}
+                                            <!--{% for article in articles %}
+                                                    <div class="list-group collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{article.id}}">
+                                                        <li class="list-group-item list-group-item-action">
+                                                            <a>{{ article.title }}</a>
+                                                        </li>
+                                                        <div id="{{article.id}}" class="collapse">
+                                                            <ol>
+                                                            {% for key, value in ranks.items %}
+                                                            {% if key == article.title %}
+                                                                {% for networks in value %}
+                                                                
+                                                                    {% for name, links in mainlinks.items %}
+                                                                    
+                                                                        {% if name == key %}
+                                                                        <form action="" method="post">
+                                                                            {% csrf_token %}
+                                                                            {% for newname, link in links.items %}
+                                                                            
+                                                                                {% if newname == networks %}
+                                                                                <li>
+                                                                                    <a class="text card-body" href="{{ link }}" target="_blank">
+                                                                                        {{ newname }} 
+                                                                                    </a>
+                                                                                    <button type="submit" name="test" formmethod="POST" class="fa fa-arrow-up btn btn-success"></button>
+                                                                                    <button type="submit" name="test2" formmethod="POST" class="fa fa-arrow-down btn btn-danger"></button>
+                                                                                </li>
+                                                                        
+                                                                                {% endif %}
+                                                                            {% endfor %}
+                                                                        </form>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                {% endfor %}
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        </ol>
+                                                        </div>
+                                                    </div>   
+                                                    
+                                                
+                                            {% endfor %}
+                                                -->
+                                            </div>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-2">
+                                <div class="card cd">
+                                    <h4 class="card-header"><center>Organizations</center></h4>
+                                    <div class="card-body">
+                                        <ol><center>
+                                            <li>Organization 1</li>
+                                            <li>Organization 2</li>
+                                            <li>Organization 3</li>
+                                            <li>Organization 4</li>
+                                            <li>Organization 5</li>
+                                        </center></ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 25px"></div>
+        <!--Topics Section-->
+        <div class="row">
+            <!--Space for Sidebar-->
+            <div class="col-lg-2 mb-2"></div>
+
+            <!--First Column of Topics-->
+            <div class="col-lg-3 mb-3">
+                <div class="card cb" tabindex="1" id="topStoriesCard">
+                    <h4 class="card-header">Top Stories</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            
+                <div class="card cb" tabindex="1" id="politicsCard">
+                    <h4 class="card-header">Politics</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            
+                <div class="card cb" tabindex="1" id="sportsCard">
+                    <h4 class="card-header">Sports</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            </div> 
+
+            <!--Second Column of Topics-->
+            <div class="col-lg-3 mb-3">
+                <div class="card cb" tabindex="1" id="usCard">
+                    <h4 class="card-header">U.S.</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            
+                <div class="card cb" tabindex="1" id="moneyCard">
+                    <h4 class="card-header">Money</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            
+                <div class="card cb" tabindex="1" id="techCard">
+                    <h4 class="card-header">Tech</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            </div> 
+
+            <!--Third Column of Topics-->
+            <div class="col-lg-3 mb-3">
+                <div class="card cb" tabindex="1" id="worldCard">
+                    <h4 class="card-header">World</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            
+                <div class="card cb" tabindex="1" id="healthCard">
+                    <h4 class="card-header">Health</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            
+                <div class="card cb" tabindex="1" id="travelCard">
+                    <h4 class="card-header">Travel</h4>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Article</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row" style="background-color: rgba(216, 216, 216, 0.125); height: 250px;">
+            
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                function scroll(a) {
+                    $('html, body').animate({
+                        'scrollTop': $(a).offset().top - ($(window).height() - $(a).outerHeight(true) ) / 2
+                    }, 750);
+                    return false;
+                }
+
+                $('a[href^="#"]').on('click', function(event) {
+                    var target = $(this.getAttribute('href'));
+                     if( target.length ) {
+                        event.preventDefault();
+                        $('html, body').stop().animate({
+                            scrollTop: target.offset().top - ( $(window).height() - $(target).outerHeight(true) ) / 2
+                        }, 1000);
+                    }
+                })
+
+                $(".scrollTo").click(function()
+                {
+                    clickedID = $(this).attr("id");
+                    clickedID = (clickedID.slice(0, -6)) + "Card";
+                    change = "#" + clickedID;
+                    scroll(change);
+                    $(change).focus();
+                    
+                })
+
+                $(".cb").click(function()
+                {
+                    clickedID = $(this).attr("id");
+                    change = "#" + clickedID;
+                    scroll(change);
+                    
+                })
+
+                var navOffset = $('#affix-this').offset().top;
+                $(window).scroll(function() {
+                    var scrollPos = $(window).scrollTop();
+                    
+                    if (scrollPos >= navOffset) {
+                        $("#affix-this").addClass("fixed");
+                        $("#affix-this").removeClass("affix");
+                    } else {
+                        $("#affix-this").removeClass("fixed");
+                        $("#affix-this").addClass("affix");
+                    }
+                })
+                
+            })
+        </script>
+{% endblock %}
