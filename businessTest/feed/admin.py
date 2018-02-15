@@ -1,10 +1,12 @@
 from django.contrib import admin
-from .models import Article, Network
+from .models import Article, Network, Likes
 # Register your models here.
 
 
 
-
+@admin.register(Likes)
+class LikesAdmin(admin.ModelAdmin):
+    save_on_top = True
 
 class NetworkInline(admin.StackedInline):
     model = Network

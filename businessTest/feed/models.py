@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from vote.models import VoteModel
 # Create your models here.
 
 
@@ -25,7 +26,6 @@ from django.utils import timezone
         return self.title"""
 
 class Article(models.Model):
-    """networks = models.ManyToManyField(Network, blank=True)"""
     title = models.CharField(max_length=200, blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     likes = models.IntegerField(default=0)
@@ -35,13 +35,16 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-class Network(models.Model):
+class Network(VoteModel, models.Model):
     article = models.ForeignKey(Article, blank=True)
     name = models.CharField(max_length=100, default='', blank=True)
     link = models.URLField(default='', blank=True)
-    likes = models.IntegerField(default=0)
+    likes2 = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
     rank = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
+class Likes(models.Model):
+    mynetwork = models.ForeignKey(Network)
+    created = models.DateTimeField(auto_now_add=True)

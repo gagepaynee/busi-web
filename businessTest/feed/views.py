@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.utils import timezone
-from feed.models import Article
+from feed.models import Article, Network
 
 # Create your views here.
 
@@ -43,26 +43,30 @@ from feed.models import Article
 
 def article_list(request):
     articles = Article.objects.all()
+    networks = []
+    final = []
     for a in articles:
         rank = a.likes - a.dislikes
         a.rank = rank
         a.save()
     articles = Article.objects.all().order_by('-rank')
     for a in articles:
-        network = a.networks.all()
+        network = Network.objects.filter(article__title=a.title)
         for n in network:
-            rank = n.likes - n.dislikes
+            rank = n.likes2 - n.dislikes
             n.rank = rank
             n.save()
-        network = a.networks.all().order_by('-rank')
-        a.networks= network
-        a.save()
-    articles = Article.objects.all().order_by('-rank')
+        network2 = Network.objects.filter(article__title=a.title).order_by('-rank')
+        networks.append(network2);
+        final.append(tuple([a,network2]))
+
     
+
     return render(request, 'feed/index.html', 
-    {'articles': articles})
+    {'final':final})
 
 
 def vote(request):
+    import pdb; pdb.set_trace()
     if request.method == "POST":
         print "post"

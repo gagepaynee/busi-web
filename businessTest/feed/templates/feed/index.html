@@ -168,8 +168,28 @@
                                     <div class="card-body">
                                         <ol>
                                             <div id="accordion">
-                                                {% for article in articles %}
-                                                    {{article.rank}} : {{article.networks.all}}
+                                                {% for article, networks in final %}
+                                                    <div class="list-group collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{article.id}}">
+                                                        <li class="list-group-item list-group-item-action">
+                                                            <a>{{ article.title }}</a>
+                                                        </li>
+                                                        <div id="{{article.id}}" class="collapse">
+                                                            {% for network in networks %}
+                                                                <li>
+                                                                    <a class="text card-body" href="{{ network.link }}" target="_blank">
+                                                                        {{ network }} 
+                                                                    </a>
+                                                                    <button type="submit" name="test" formmethod="POST" class="fa fa-arrow-up btn btn-success"></button>
+                                                                    
+                                                                    <form action="" method="POST">
+                                                                            {% csrf_token %}
+                                                                        <input type="submit" value="">
+                                                                    </form>
+                                                                    <button type="submit" name="test2" formmethod="POST" class="fa fa-arrow-down btn btn-danger"></button>
+                                                                </li>
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
                                                 {% endfor %}
                                             <!--{% for article in articles %}
                                                     <div class="list-group collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{article.id}}">
